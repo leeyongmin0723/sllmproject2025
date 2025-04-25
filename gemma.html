@@ -2,9 +2,79 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <title>이용민의 지능형 질문 시스템</title>
   <script src="gemma.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background: linear-gradient(to right, #f7f8fa, #e9eff5);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .input-container {
+      width: 100%;
+      max-width: 700px;
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      resize: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .response-box {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      white-space: pre-line;
+      font-size: 1rem;
+      color: #2d3436;
+    }
+  </style>
 </head>
 <body>
+  <h1>💬 이용민의 지능형 질문</h1>
+  <div class="input-container">
+    <textarea id="input" placeholder="질문을 입력하세요..."></textarea><br>
     <button id="submit">질문하기</button>
+  </div>
+  <div id="response" class="response-box">응답이 여기에 표시됩니다.</div>
 </body>
 </html>
